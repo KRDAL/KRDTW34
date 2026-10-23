@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="navigation">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="navigation-scene">
+            <objects>
+                <navigationController id="navigation" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="navigation-bar">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="welcome" kind="relationship" relationship="rootViewController" id="root-relationship"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="navigation-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-865" y="5"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="welcome-scene">
+            <objects>
+                <viewController id="welcome" customClass="WelcomeViewController" customModule="ClubConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="welcome-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="welcome-scroll">
+                                <rect key="frame" x="0.0" y="172" width="393" height="612"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="welcome-stack">
+                                        <rect key="frame" x="24" y="24" width="345" height="529.33333333333337"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="welcome-logo-holder">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="72"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="welcome-logo">
+                                                        <rect key="frame" x="136.66666666666666" y="1.3333333333333357" width="72" height="70.666666666666657"/>
+                                                        <color key="tintColor" systemColor="systemTealColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="72" id="welcome-logo-height"/>
+                                                            <constraint firstAttribute="width" constant="72" id="welcome-logo-width"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="welcome-logo" firstAttribute="centerX" secondItem="welcome-logo-holder" secondAttribute="centerX" id="welcome-logo-holder-constraint-0"/>
+                                                    <constraint firstItem="welcome-logo" firstAttribute="centerY" secondItem="welcome-logo-holder" secondAttribute="centerY" id="welcome-logo-holder-constraint-1"/>
+                                                    <constraint firstAttribute="height" constant="72" id="welcome-logo-holder-height"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="title-label">
+                                                <rect key="frame" x="0.0" y="88" width="345" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Find your people. Join the Robotics Club today." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="subtitle-label">
+                                                <rect key="frame" x="0.0" y="104" width="345" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="YOUR NAME" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="name-caption">
+                                                <rect key="frame" x="0.0" y="139.33333333333331" width="345" height="14.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="name-field">
+                                                <rect key="frame" x="0.0" y="169.66666666666669" width="345" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="name-field-height"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done" textContentType="name"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="reminder-row">
+                                                <rect key="frame" x="0.0" y="235.66666666666669" width="345" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Meeting reminders" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="reminder-caption">
+                                                        <rect key="frame" x="0.0" y="4.3333333333333144" width="272" height="19.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="reminders-switch">
+                                                        <rect key="frame" x="284" y="0.0" width="63" height="28"/>
+                                                        <color key="onTintColor" systemColor="systemTealColor"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="JOINING AS" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="role-caption">
+                                                <rect key="frame" x="0.0" y="279.66666666666669" width="345" height="14.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="role-control">
+                                                <rect key="frame" x="0.0" y="310" width="345" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="role-control-height"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Member"/>
+                                                    <segment title="Officer"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="join-button">
+                                                <rect key="frame" x="0.0" y="362" width="345" height="52"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="join-button-height"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <state key="normal" title="Join the Club"/>
+                                                <connections>
+                                                    <action selector="joinClubTapped:" destination="welcome" eventType="touchUpInside" id="join-button-action"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="browse-button">
+                                                <rect key="frame" x="0.0" y="430" width="345" height="52"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="browse-button-height"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <state key="normal" title="Browse Clubs"/>
+                                                <connections>
+                                                    <action selector="browseClubsTapped:" destination="welcome" eventType="touchUpInside" id="browse-button-action"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Your choices are saved on this device when you join or browse." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="privacy-caption">
+                                                <rect key="frame" x="0.0" y="497.99999999999994" width="345" height="31.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="welcome-stack" firstAttribute="top" secondItem="welcome-contentGuide" secondAttribute="top" constant="24" id="welcome-scroll-constraint-0"/>
+                                    <constraint firstItem="welcome-stack" firstAttribute="leading" secondItem="welcome-contentGuide" secondAttribute="leading" constant="24" id="welcome-scroll-constraint-1"/>
+                                    <constraint firstItem="welcome-contentGuide" firstAttribute="trailing" secondItem="welcome-stack" secondAttribute="trailing" constant="24" id="welcome-scroll-constraint-2"/>
+                                    <constraint firstItem="welcome-contentGuide" firstAttribute="bottom" secondItem="welcome-stack" secondAttribute="bottom" constant="24" id="welcome-scroll-constraint-3"/>
+                                    <constraint firstItem="welcome-stack" firstAttribute="width" secondItem="welcome-frameGuide" secondAttribute="width" constant="-48" id="welcome-scroll-constraint-4"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="welcome-contentGuide"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="welcome-frameGuide"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="welcome-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="welcome-scroll" firstAttribute="top" secondItem="welcome-safe" secondAttribute="top" id="welcome-view-constraint-0"/>
+                            <constraint firstItem="welcome-scroll" firstAttribute="bottom" secondItem="welcome-safe" secondAttribute="bottom" id="welcome-view-constraint-1"/>
+                            <constraint firstItem="welcome-scroll" firstAttribute="leading" secondItem="welcome-safe" secondAttribute="leading" id="welcome-view-constraint-2"/>
+                            <constraint firstItem="welcome-scroll" firstAttribute="trailing" secondItem="welcome-safe" secondAttribute="trailing" id="welcome-view-constraint-3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="welcome-navigation"/>
+                    <connections>
+                        <outlet property="browseButton" destination="browse-button" id="outlet-browseButton-browse-button"/>
+                        <outlet property="joinButton" destination="join-button" id="outlet-joinButton-join-button"/>
+                        <outlet property="nameTextField" destination="name-field" id="outlet-nameTextField-name-field"/>
+                        <outlet property="remindersSwitch" destination="reminders-switch" id="outlet-remindersSwitch-reminders-switch"/>
+                        <outlet property="roleSegmentedControl" destination="role-control" id="outlet-roleSegmentedControl-role-control"/>
+                        <outlet property="scrollView" destination="welcome-scroll" id="outlet-scrollView-welcome-scroll"/>
+                        <outlet property="titleLabel" destination="title-label" id="outlet-titleLabel-title-label"/>
+                        <segue destination="confirmation" kind="show" identifier="ShowConfirmationSegue" id="ShowConfirmationSegue-connection"/>
+                        <segue destination="clubs" kind="show" identifier="ShowClubListSegue" id="ShowClubListSegue-connection"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="welcome-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="5"/>
+        </scene>
+        <!--Confirmation-->
+        <scene sceneID="confirmation-scene">
+            <objects>
+                <viewController id="confirmation" customClass="ConfirmationViewController" customModule="ClubConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="confirmation-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="confirmation-scroll">
+                                <rect key="frame" x="0.0" y="172" width="393" height="612"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="confirmation-stack">
+                                        <rect key="frame" x="24" y="24" width="345" height="255"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="confirmation-check-holder">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="64"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="confirmation-check">
+                                                        <rect key="frame" x="140.66666666666666" y="0.33333333333333215" width="64" height="63.333333333333343"/>
+                                                        <color key="tintColor" systemColor="systemTealColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="64" id="confirmation-check-height"/>
+                                                            <constraint firstAttribute="width" constant="64" id="confirmation-check-width"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="confirmation-check" firstAttribute="centerX" secondItem="confirmation-check-holder" secondAttribute="centerX" id="confirmation-check-holder-constraint-0"/>
+                                                    <constraint firstItem="confirmation-check" firstAttribute="centerY" secondItem="confirmation-check-holder" secondAttribute="centerY" id="confirmation-check-holder-constraint-1"/>
+                                                    <constraint firstAttribute="height" constant="64" id="confirmation-check-holder-height"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Registration summary" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="summary-heading">
+                                                <rect key="frame" x="0.0" y="80" width="345" height="28.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="message-label">
+                                                <rect key="frame" x="0.0" y="124.66666666666669" width="345" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="club-details-stack">
+                                                <rect key="frame" x="0.0" y="140.66666666666669" width="345" height="114.33333333333331"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="YOUR SELECTED CLUB" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="club-heading">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="14.333333333333334"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="detail-icon-holder">
+                                                        <rect key="frame" x="0.0" y="26.333333333333314" width="345" height="64"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="detail-icon">
+                                                                <rect key="frame" x="140.66666666666666" y="1.3333333333333321" width="64" height="62.666666666666671"/>
+                                                                <color key="tintColor" systemColor="systemTealColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="64" id="detail-icon-height"/>
+                                                                    <constraint firstAttribute="width" constant="64" id="detail-icon-width"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="detail-icon" firstAttribute="centerX" secondItem="detail-icon-holder" secondAttribute="centerX" id="detail-icon-holder-constraint-0"/>
+                                                            <constraint firstItem="detail-icon" firstAttribute="centerY" secondItem="detail-icon-holder" secondAttribute="centerY" id="detail-icon-holder-constraint-1"/>
+                                                            <constraint firstAttribute="height" constant="64" id="detail-icon-holder-height"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="detail-name">
+                                                        <rect key="frame" x="0.0" y="102.33333333333331" width="345" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="detail-category">
+                                                        <rect key="frame" x="0.0" y="114.33333333333331" width="345" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="confirmation-stack" firstAttribute="top" secondItem="confirmation-contentGuide" secondAttribute="top" constant="24" id="confirmation-scroll-constraint-0"/>
+                                    <constraint firstItem="confirmation-stack" firstAttribute="leading" secondItem="confirmation-contentGuide" secondAttribute="leading" constant="24" id="confirmation-scroll-constraint-1"/>
+                                    <constraint firstItem="confirmation-contentGuide" firstAttribute="trailing" secondItem="confirmation-stack" secondAttribute="trailing" constant="24" id="confirmation-scroll-constraint-2"/>
+                                    <constraint firstItem="confirmation-contentGuide" firstAttribute="bottom" secondItem="confirmation-stack" secondAttribute="bottom" constant="24" id="confirmation-scroll-constraint-3"/>
+                                    <constraint firstItem="confirmation-stack" firstAttribute="width" secondItem="confirmation-frameGuide" secondAttribute="width" constant="-48" id="confirmation-scroll-constraint-4"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="confirmation-contentGuide"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="confirmation-frameGuide"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="confirmation-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="confirmation-scroll" firstAttribute="top" secondItem="confirmation-safe" secondAttribute="top" id="confirmation-view-constraint-0"/>
+                            <constraint firstItem="confirmation-scroll" firstAttribute="bottom" secondItem="confirmation-safe" secondAttribute="bottom" id="confirmation-view-constraint-1"/>
+                            <constraint firstItem="confirmation-scroll" firstAttribute="leading" secondItem="confirmation-safe" secondAttribute="leading" id="confirmation-view-constraint-2"/>
+                            <constraint firstItem="confirmation-scroll" firstAttribute="trailing" secondItem="confirmation-safe" secondAttribute="trailing" id="confirmation-view-constraint-3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Confirmation" id="confirmation-navigation"/>
+                    <connections>
+                        <outlet property="categoryLabel" destination="detail-category" id="outlet-categoryLabel-detail-category"/>
+                        <outlet property="clubDetailsStackView" destination="club-details-stack" id="outlet-clubDetailsStackView-club-details-stack"/>
+                        <outlet property="clubIconImageView" destination="detail-icon" id="outlet-clubIconImageView-detail-icon"/>
+                        <outlet property="clubNameLabel" destination="detail-name" id="outlet-clubNameLabel-detail-name"/>
+                        <outlet property="messageLabel" destination="message-label" id="outlet-messageLabel-message-label"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="confirmation-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="5"/>
+        </scene>
+        <!--Clubs-->
+        <scene sceneID="clubs-scene">
+            <objects>
+                <viewController id="clubs" customClass="ClubListViewController" customModule="ClubConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="clubs-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" estimatedRowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="clubs-table">
+                                <rect key="frame" x="0.0" y="172" width="393" height="612"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ClubCell" rowHeight="88" id="club-cell" customClass="ClubCell" customModule="ClubConnect" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="club-cell" id="cell-content">
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="88"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="cell-icon">
+                                                    <rect key="frame" x="20" y="24" width="40" height="40"/>
+                                                    <color key="tintColor" systemColor="systemTealColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="cell-icon-height"/>
+                                                        <constraint firstAttribute="width" constant="40" id="cell-icon-width"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cell-labels">
+                                                    <rect key="frame" x="76" y="16" width="270.66666666666669" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Club name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="cell-name">
+                                                            <rect key="frame" x="0.0" y="0.0" width="270.66666666666669" height="35"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Category" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="cell-category">
+                                                            <rect key="frame" x="0.0" y="39" width="270.66666666666669" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cell-icon" firstAttribute="leading" secondItem="cell-content" secondAttribute="leading" constant="20" id="cell-content-constraint-0"/>
+                                                <constraint firstItem="cell-icon" firstAttribute="centerY" secondItem="cell-content" secondAttribute="centerY" id="cell-content-constraint-1"/>
+                                                <constraint firstItem="cell-icon" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cell-content" secondAttribute="top" constant="16" id="cell-content-constraint-2"/>
+                                                <constraint firstItem="cell-labels" firstAttribute="leading" secondItem="cell-icon" secondAttribute="trailing" constant="16" id="cell-content-constraint-3"/>
+                                                <constraint firstItem="cell-labels" firstAttribute="top" secondItem="cell-content" secondAttribute="top" constant="16" id="cell-content-constraint-4"/>
+                                                <constraint firstAttribute="bottom" secondItem="cell-labels" secondAttribute="bottom" constant="16" id="cell-content-constraint-5"/>
+                                                <constraint firstAttribute="trailing" secondItem="cell-labels" secondAttribute="trailing" constant="16" id="cell-content-constraint-6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryLabel" destination="cell-category" id="outlet-categoryLabel-cell-category"/>
+                                            <outlet property="clubIconImageView" destination="cell-icon" id="outlet-clubIconImageView-cell-icon"/>
+                                            <outlet property="clubNameLabel" destination="cell-name" id="outlet-clubNameLabel-cell-name"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="clubs" id="outlet-dataSource-clubs"/>
+                                    <outlet property="delegate" destination="clubs" id="outlet-delegate-clubs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="clubs-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="clubs-table" firstAttribute="top" secondItem="clubs-safe" secondAttribute="top" id="clubs-view-constraint-0"/>
+                            <constraint firstItem="clubs-table" firstAttribute="bottom" secondItem="clubs-safe" secondAttribute="bottom" id="clubs-view-constraint-1"/>
+                            <constraint firstItem="clubs-table" firstAttribute="leading" secondItem="clubs-safe" secondAttribute="leading" id="clubs-view-constraint-2"/>
+                            <constraint firstItem="clubs-table" firstAttribute="trailing" secondItem="clubs-safe" secondAttribute="trailing" id="clubs-view-constraint-3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Clubs" id="clubs-navigation">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="add-club-button">
+                            <connections>
+                                <action selector="addClubTapped:" destination="clubs" id="add-club-action"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="clubs-table" id="outlet-tableView-clubs-table"/>
+                        <segue destination="confirmation" kind="show" identifier="ShowClubDetailSegue" id="ShowClubDetailSegue-connection"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="clubs-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="503" y="5"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ShowClubDetailSegue-connection"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="128"/>
+        <image name="person.3.fill" catalog="system" width="128" height="68"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.0" green="0.76470588240000004" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
