@@ -1,7 +1,0 @@
-This is a newly authored ClubConnect project prepared from the two supplied PDFs.
-It was assembled outside Xcode, not copied from Campus Companion.
-The included commits record the actual assembly milestones of this generated project.
-They are not a record of the student's earlier work or evidence of Simulator testing.
-The PDFs specifically ask for creation using Xcode's App template. This archive uses
-the equivalent UIKit/Storyboard project structure, but the Xcode template wizard
-was not run in this environment. Review this distinction with your instructor.
